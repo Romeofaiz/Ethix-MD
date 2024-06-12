@@ -97,7 +97,7 @@ const serverStatusCommand = async (m, Matrix) => {
       clearInterval(loadingInterval);
 
       // Create the status message
-      const statusMessage = `_Ethix-MD Status_\n\n📅 Uptime: ${uptime}\n🖥 Platform: ${platform}\n\n> © Powered by 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿`;
+      const statusMessage = `_ROMEK-XD-V3 Status_\n\n📅 Uptime: ${uptime}\n🖥 Platform: ${platform}\n\n> © Powered by ROMEK-XD`;
 
       await typeWriterEffect(m, Matrix, key, statusMessage);
     } catch (error) {
