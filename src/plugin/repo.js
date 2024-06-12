@@ -8,7 +8,7 @@ const handleRepoCommand = async (m, Matrix) => {
     const response = await axios.get(repoUrl);
     const repoData = response.data;
 
-    const { full_name, forks_count, stargazers_count, created_at, updated_at, owner } = repoData;
+    const { full_name, name, forks_count, stargazers_count, created_at, updated_at, owner } = repoData;
 
     const messageText = `📊 Repository Information:
     \n🔸 *Name:* ${name}
@@ -33,7 +33,7 @@ const handleRepoCommand = async (m, Matrix) => {
               text: "© Powered By Ethix-MD"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
-              ...(await prepareWAMessageMedia({ image: { url: owner.avatar_url } }, { upload: Matrix.waUploadToServer })),
+             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/fbbe1744668b44637c21a.jpg` } }, { upload: Matrix.waUploadToServer })),
               title: "",
               gifPlayback: true,
               subtitle: "",
